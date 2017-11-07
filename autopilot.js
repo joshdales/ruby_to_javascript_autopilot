@@ -25,4 +25,12 @@ function getDestination(car) {
     return 'Toronto';
   }
 }
-console.log(getDestination(getNewCar()))
+
+function fillUpGas(car) {
+  var oldGas = car.gas;
+  car.gas = 100;
+  return 'Filled up to ' + car.gas + ' on gas from ' + oldGas + '.';
+}
+var car = getNewCar()
+car.gas = 50
+console.log(fillUpGas(car));
