@@ -50,3 +50,8 @@ var containers = ['purse', 'wallet', 'backbelt'];
 containers.forEach(function(container) {
   console.log(container);
 })
+
+function helloWorld() {
+  console.log('Hello World');
+}
+helloWorld()
