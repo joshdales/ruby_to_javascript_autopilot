@@ -11,8 +11,8 @@ function addCar(cars, newCar) {
 }
 
 function pickUpPassenger(car) {
-  car['passengers'] =+ 1;
-  car['gas'] -= 10;
+  car.passengers += 1;
+  car.gas -= 10;
   console.log('Picked up passenger. Car now has ' + car.passengers + ' passengers');
 }
 
@@ -32,9 +32,18 @@ function fillUpGas(car) {
   return 'Filled up to ' + car.gas + ' on gas from ' + oldGas + '.';
 }
 
-function GetGasDisplay(gas_amount) {
-  return car.gas + '%';
+function GetGasDisplay(gasAmount) {
+  return gasAmount + '%';
 }
 
-car = getNewCar()
-console.log(GetGasDisplay(car));
+function drive(car, cityDistance) {
+  if (car.gas < cityDistance) {
+    return fillUpGas(car);
+  }
+
+  car.city = getDestination(car);
+  car.gas -= cityDistance;
+  return 'Drove to ' + car.city + '. Remaining gas: ' + GetGasDisplay(car.gas) + '.'
+}
+var car = getNewCar();
+console.log(drive(car, 80));
