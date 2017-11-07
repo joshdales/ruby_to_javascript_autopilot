@@ -21,8 +21,9 @@ if (num > 10) {
   console.log(num + ' must be less than 10.');
 }
 
-var sentence = 'Doing the same thing over and over.';
-console.log(sentence.repeat(10));
+for (var i = 0; i <= 10; i++) {
+  console.log('Doing the same thing over and over.');
+}
 
 var base = 5;
 for (var i = 0; i <= 20; i += base) {
