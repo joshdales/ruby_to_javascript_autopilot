@@ -26,8 +26,15 @@ for (var i = 0; i <= 10; i++) {
 }
 
 var base = 5;
-var num = 0
+var num = 0;
 for (var i = 0; i <= 20; i ++) {
-    num += base
+    num += base;
   console.log(num);
 }
+
+var total = 0;
+var num = 0;
+for (var i = 0; i <= 100; i++) {
+  total += num;
+}
+console.log(total);
