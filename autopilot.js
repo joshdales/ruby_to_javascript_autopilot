@@ -51,6 +51,24 @@ function dropOffPassengers(car) {
   car.passengers = 0;
   return 'Dropped off ' + previousPasserngers + ' passengers.'
 }
+
+function act(car) {
+  distanceBetweenCities = 50
+
+  if (car.gas < 20) {
+    return fillUpGas(car);
+  } else if (car.passengers < 3) {
+    return pickUpPassenger(car);
+  } else {
+    if (car.gas < distanceBetweenCities) {
+      return fillUpGas(car);
+    }
+    var droveTo = drive(car, distanceBetweenCities);
+    var passengersDropped = dropOffPassengers(car);
+    return droveTo + passengersDropped
+  }
+}
+
 var car = getNewCar();
-console.log(pickUpPassenger(car));
-console.log(dropOffPassengers(car));
+car.passengers = 4;
+console.log(act(car));
