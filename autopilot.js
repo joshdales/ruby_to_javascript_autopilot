@@ -77,10 +77,13 @@ function commandFleet(cars) {
   console.log('---');
 }
 
-var cars = [];
-car = getNewCar();
-car2 = getNewCar();
-addCar(cars, car);
-addCar(cars, car2);
+function addOneCarPerDay(cars, numDays) {
+  for (var i = 0; i <= numDays; i++) {
+    var newCar = getNewCar();
+    console.log(addCar(cars, newCar));
+    commandFleet(cars)
+  }
+}
 
-commandFleet(cars);
+var cars = [];
+addOneCarPerDay(cars, 10);
