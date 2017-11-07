@@ -20,3 +20,6 @@ if (num > 10) {
 } else {
   console.log(num + ' must be less than 10.');
 }
+
+var sentence = 'Doing the same thing over and over.'
+console.log(sentence.repeat(10));
