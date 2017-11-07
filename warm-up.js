@@ -45,3 +45,8 @@ for (var height = 3; height <= 15; height++) {
     console.log('You are too short to ride the rollercoaster.');
   }
 }
+
+var containers = ['purse', 'wallet', 'backbelt'];
+containers.forEach(function(container) {
+  console.log(container);
+})
