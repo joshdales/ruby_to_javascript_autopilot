@@ -38,7 +38,7 @@ function GetGasDisplay(gasAmount) {
 
 function drive(car, cityDistance) {
   if (car.gas < cityDistance) {
-    return fillUpGas(car);
+    console.log(fillUpGas(car));
   }
 
   car.city = getDestination(car);
@@ -69,6 +69,18 @@ function act(car) {
   }
 }
 
-var car = getNewCar();
-car.passengers = 4;
-console.log(act(car));
+function commandFleet(cars) {
+  cars.forEach(function (car, i) {
+    var action = act(car);
+    console.log('Car ' + (i+1) + ': ' + action);
+  })
+  console.log('---');
+}
+
+var cars = [];
+car = getNewCar();
+car2 = getNewCar();
+addCar(cars, car);
+addCar(cars, car2);
+
+commandFleet(cars);
