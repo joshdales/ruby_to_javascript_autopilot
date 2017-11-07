@@ -2,7 +2,6 @@
 
 var apples = 14;
 console.log(apples);
-
 console.log('I have ' + apples + ' apples.');
 
 var materials = ['wood', 'metal', 'stone'];
@@ -38,3 +37,11 @@ for (var i = 0; i <= 100; i++) {
   total += num;
 }
 console.log(total);
+
+for (var height = 3; height <= 15; height++) {
+  if (height > 9) {
+    console.log('You can get on the rollercoaster!');
+  } else {
+    console.log('You are too short to ride the rollercoaster.');
+  }
+}
