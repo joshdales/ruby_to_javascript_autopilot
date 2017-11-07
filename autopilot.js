@@ -15,4 +15,14 @@ function pickUpPassenger(car) {
   car['gas'] -= 10;
   console.log('Picked up passenger. Car now has ' + car.passengers + ' passengers');
 }
-pickUpPassenger(getNewCar());
+
+function getDestination(car) {
+  if (car.city === 'Toronto') {
+    return 'Mississauga';
+  } else if (car.city === 'Mississauga') {
+    return 'London';
+  } else if (car.city === 'London'){
+    return 'Toronto';
+  }
+}
+console.log(getDestination(getNewCar()))
