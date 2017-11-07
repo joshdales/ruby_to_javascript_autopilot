@@ -31,6 +31,10 @@ function fillUpGas(car) {
   car.gas = 100;
   return 'Filled up to ' + car.gas + ' on gas from ' + oldGas + '.';
 }
-var car = getNewCar()
-car.gas = 50
-console.log(fillUpGas(car));
+
+function GetGasDisplay(gas_amount) {
+  return car.gas + '%';
+}
+
+car = getNewCar()
+console.log(GetGasDisplay(car));
