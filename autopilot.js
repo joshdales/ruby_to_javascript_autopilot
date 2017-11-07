@@ -4,4 +4,8 @@ function getNewCar() {
   'gas':100};
   return newCar;
 }
-console.log(getNewCar());
+
+function addCar(cars, newCar) {
+  cars.push(newCar);
+  console.log('Adding new car to fleet. Fleet size is now ' + cars.length);
+}
