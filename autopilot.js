@@ -7,13 +7,13 @@ function getNewCar() {
 
 function addCar(cars, newCar) {
   cars.push(newCar);
-  console.log('Adding new car to fleet. Fleet size is now ' + cars.length);
+  return 'Adding new car to fleet. Fleet size is now ' + cars.length;
 }
 
 function pickUpPassenger(car) {
   car.passengers += 1;
   car.gas -= 10;
-  console.log('Picked up passenger. Car now has ' + car.passengers + ' passengers');
+  return 'Picked up passenger. Car now has ' + car.passengers + ' passengers';
 }
 
 function getDestination(car) {
@@ -45,5 +45,12 @@ function drive(car, cityDistance) {
   car.gas -= cityDistance;
   return 'Drove to ' + car.city + '. Remaining gas: ' + GetGasDisplay(car.gas) + '.'
 }
+
+function dropOffPassengers(car) {
+  var previousPasserngers = car.passengers;
+  car.passengers = 0;
+  return 'Dropped off ' + previousPasserngers + ' passengers.'
+}
 var car = getNewCar();
-console.log(drive(car, 80));
+console.log(pickUpPassenger(car));
+console.log(dropOffPassengers(car));
