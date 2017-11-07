@@ -11,3 +11,12 @@ var words = {
   'school': 'A place for learning.',
   'ice cream': 'A delicious milk based dessert.'
 }
+
+var num = 16;
+if (num > 10) {
+  console.log(num + ' is greater than 10.');
+} else if (num === 10) {
+  console.log(num + ' is exactly 10.');
+} else {
+  console.log(num + ' must be less than 10.');
+}
