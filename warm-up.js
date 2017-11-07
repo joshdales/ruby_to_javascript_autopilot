@@ -55,3 +55,9 @@ function helloWorld() {
   console.log('Hello World');
 }
 helloWorld()
+
+function add(firstNum, secondNum) {
+  return firstNum + secondNum;
+}
+var amount = add(5, 7);
+console.log(amount);
