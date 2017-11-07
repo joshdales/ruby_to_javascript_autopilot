@@ -9,3 +9,10 @@ function addCar(cars, newCar) {
   cars.push(newCar);
   console.log('Adding new car to fleet. Fleet size is now ' + cars.length);
 }
+
+function pickUpPassenger(car) {
+  car['passengers'] =+ 1;
+  car['gas'] -= 10;
+  console.log('Picked up passenger. Car now has ' + car.passengers + ' passengers');
+}
+pickUpPassenger(getNewCar());
